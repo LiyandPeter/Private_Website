@@ -1,0 +1,104 @@
+body {
+    background-color: #ffedd5; /* 確認背景色與兩個頁面一致 */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%; 
+}
+header{
+    display: flex;
+    background-color: #ffd9b0;
+    align-items: center;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:90px;
+}
+
+h1{
+    color: #9b4e00;
+    font-size: 42px;
+}
+.logo{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 10%;
+    align-items: center;
+}
+
+.nav-links {
+    justify-content: center;
+    display: flex;               /* 使鏈結水平排列 */
+    gap: 100px;                    /* 每個鏈結之間的間距 */
+}
+
+.nav-links a {
+    color: #9b4e00;                  /* 鏈結文字顏色 */
+    text-decoration: none;        /* 移除下劃線 */
+    transition: color 0.4s;       /* 增加顏色變化的過渡效果 */
+}
+
+.header-nav a{
+    color: #9b4e00;                  /* 鏈結文字顏色 */
+    text-decoration: none;        /* 移除下劃線 */
+    transition: color 0.4s; 
+}
+
+.header-nav {
+    display: flex;               /* 使鏈結水平排列 */
+    gap: 50px;                    /* 每個鏈結之間的間距 */
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    justify-content: center;        /* 垂直置中 */
+    align-items: center;   
+}
+
+.nav-item {
+    display: flex;                      /* 使圖標和文字垂直排列 */
+    flex-direction: column;
+    align-items: center;                        /* 文字與圖標顏色 */
+    text-decoration: none;              /* 移除下劃線 */
+    font-size: 16px;                    /* 設定文字大小 */
+    transition: color 0.4s;             /* 增加過渡效果 */
+}
+
+.nav-item:hover {
+    color: #df0303;
+    transform: scale(1.5); 
+}
+
+.nav-item img {
+    width: 24px;                        /* 設定圖片圖標大小 */
+    height: 24px;
+    margin-bottom: 3px;                 /* 圖片與文字之間的距離 */
+    transition: transform 0.4s;         /* 增加過渡效果 */
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/* 輪播容器的樣式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px); /* 設置高度為視口高度減去 Header 高度 */
+    margin-top: 90px; /* 使 Carousel 從 Header 下方開始 */
+    overflow: hidden;
+  }
+  
+  /* 單張圖片樣式 */
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out; /* 平滑的過渡效果 */
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
