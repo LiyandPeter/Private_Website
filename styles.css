@@ -102,3 +102,105 @@ h1{
     height: 100%;
     object-fit: cover;
   }
+  /*----------------------------------------------------------------*/
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 90px); /* 視窗高度減去 header 高度 */
+    margin-top: 90px; /* 避免內容被 header 遮擋 */
+    background-color: #ffedd5; /* 與背景一致 */
+}
+
+/* 左右分區容器 */
+.auth-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 80%; /* 增加占比 */
+    max-width: 900px; /* 限制最大寬度 */
+    height: 70%; /* 占視窗高度的 70% */
+}
+
+/* 登錄部分樣式 */
+.login-section, .register-section {
+    flex: 1; /* 左右平分 */
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-section {
+    background-color: #ffd9b0;
+}
+
+.register-section {
+    background-color: #ffe4c7;
+}
+
+/* 標題樣式 */
+.login-section h2, .register-section h2 {
+    font-size: 28px;
+    color: #9b4e00;
+    margin-bottom: 1em;
+}
+
+/* 表單樣式 */
+.login-section form, .register-section form {
+    width: 80%;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 0.5em;
+    color: #333333;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #9b4e00;
+    color: #ffffff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #df0303;
+}
+
+/* 對於小螢幕的響應式樣式 */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column; /* 垂直排列 */
+        height: auto; /* 自動調整高度 */
+    }
+    
+    .login-section, .register-section {
+        flex: none; /* 防止內容被壓縮 */
+        width: 100%; /* 每個部分占滿寬度 */
+    }
+}
+
+

@@ -3,34 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登錄</title>
+    <title>登錄與註冊</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img>
             <h1>棠吉訶德</h1>
         </div>
         <nav class="nav-links">
+            <!--主頁連結-->
             <a href="index.html" class="nav-item">
                 <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/home.png?raw=true" alt="Home Icon">
                 <span>主頁</span>
             </a>
+            <!--春季連結-->
+            <a href="Spring.hmtl.html" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/ecology.png?raw=true" alt="Spring Icon">
+                <span>春季</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/sun.png?raw=true" alt="Summer Icon">
+                <span>夏季</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/leaf.png?raw=true" alt="Autumn Icon">
+                <span>秋季</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/snowflake.png?raw=true" alt="Winter Icon">
+                <span>冬季</span>
+            </a>
+            <a href="LogIn.html" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/person_man.png?raw=true" alt="Login Icon">
+                <span>登錄</span>
+            </a>
+        </nav>
+        <nav class="header-nav">
+            <!-- 圖示加文字的按鈕 -->
+            <a href="page2.html" id="icon-button" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/search.png?raw=true" alt="圖示" class="nav-icon">
+                <span class="nav-text">搜尋</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/%E5%9C%96%E7%A4%BA%E5%90%8D%E7%A8%B1.png?raw=true" alt="圖示" class="nav-icon">
+                <span class="nav-text">語言</span>
+            </a>
         </nav>
     </header>
-
+    <!-------------------------------------------------------------------------------------------------------------------------------------------->
     <main>
-        <div class="login-container">
-            <h2>登錄</h2>
-            <form action="#" method="POST">
-                <label for="username">用戶名：</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">密碼：</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">提交</button>
-                <a href="index.html" class="back-link">返回主頁</a>
-            </form>
+        <div class="auth-container">
+            <!-- 登錄部分 -->
+            <div class="login-section">
+                <h2>登錄</h2>
+                <form action="#" method="post">
+                    <label for="login-email">電子郵件</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="輸入電子郵件" required>
+                    
+                    <label for="login-password">密碼</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="輸入密碼" required>
+                    
+                    <button type="submit">登錄</button>
+                </form>
+            </div>
+            <!-- 註冊部分 -->
+            <div class="register-section">
+                <h2>註冊帳號</h2>
+                <form action="#" method="post">
+                    <label for="register-email">電子郵件</label>
+                    <input type="email" id="register-email" name="register-email" placeholder="輸入電子郵件" required>
+                    
+                    <label for="register-password">密碼</label>
+                    <input type="password" id="register-password" name="register-password" placeholder="設定密碼" required>
+                    
+                    <label for="register-confirm-password">確認密碼</label>
+                    <input type="password" id="register-confirm-password" name="register-confirm-password" placeholder="再次輸入密碼" required>
+                    
+                    <button type="submit">註冊</button>
+                </form>
+            </div>
         </div>
     </main>
 </body>
