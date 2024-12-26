@@ -51,21 +51,33 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.carousel').addEventListener('wheel', handleWheel);
     updateSlide(); // 初始化圖片位置
   });
-//-----------------
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchButton = document.getElementById('searchButton');
-    const searchContainer = document.getElementById('searchContainer');
-    const searchIcon = document.getElementById('searchIcon');
-  
-    if (searchButton && searchContainer && searchIcon) {
-      searchButton.addEventListener('click', function() {
-        searchContainer.classList.toggle('active');
-  
-        if (searchContainer.classList.contains('active')) {
-          searchIcon.textContent = '✖';
-        } else {
-          searchIcon.textContent = '🔍';
-        }
-      });
-    }
+//------------------------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  const searchButton = document.getElementById('search-button');
+  const closeButton = document.getElementById('close-button');
+  const searchContainer = document.getElementById('searchContainer');
+
+  // 點擊搜尋按鈕顯示搜尋欄並顯示取消按鈕
+  searchButton.addEventListener('click', function () {
+      searchContainer.classList.remove('hidden');
+      searchButton.classList.add('hidden');
+      closeButton.classList.remove('hidden');
   });
+
+  // 點擊取消按鈕隱藏搜尋欄並切換回搜尋按鈕
+  closeButton.addEventListener('click', function () {
+      searchContainer.classList.add('hidden');
+      searchButton.classList.remove('hidden');
+      closeButton.classList.add('hidden');
+  });
+});
+
+document.getElementById('searchInput').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+      const query = e.target.value.trim();
+      if (query) {
+          alert(`搜尋關鍵字：${query}`);
+          // 未來可改為搜尋結果的處理邏輯
+      }
+  }
+});

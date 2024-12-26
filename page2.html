@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品分類</title>
+    <title>搜尋頁面</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Header -->
+    <!-- Header -->
     <header id="header">
         <div class="logo">
-            <img>
             <h1>棠吉訶德</h1>
         </div>
         <nav class="nav-links">
@@ -18,7 +17,7 @@
                 <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/home.png?raw=true" alt="Home Icon">
                 <span>主頁</span>
             </a>
-            <a href="Spring.hmtl.html" class="nav-item">
+            <a href="Spring.html" class="nav-item">
                 <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/ecology.png?raw=true" alt="Spring Icon">
                 <span>春季</span>
             </a>
@@ -40,19 +39,19 @@
             </a>
         </nav>
         <nav class="header-nav">
-            <!-- 圖示加文字的按鈕 -->
-                <a href="index.html" id="close-button" class="nav-item">
-                    <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/close.png?raw=true" alt="關閉圖示" class="nav-icon">
-                    <span class="nav-text">取消</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/%E5%9C%96%E7%A4%BA%E5%90%8D%E7%A8%B1.png?raw=true" alt="圖示" class="nav-icon">
-                    <span class="nav-text">語言</span>
-                </a>
+            <!-- 取消按鈕 -->
+            <a href="index.html" id="close-button" class="nav-item">
+                <img src="https://github.com/LiyandPeter/Private_Website/blob/main/Images/icon/close.png?raw=true" alt="關閉圖示" class="nav-icon">
+                <span class="nav-text">取消</span>
+            </a>
         </nav>
     </header>
-    <div id="searchContainer" class="hidden">
+
+    <!-- 搜尋區域 -->
+    <div id="searchContainer">
         <input type="text" id="searchInput" placeholder="輸入關鍵字進行搜尋...">
-      </div>
+    </div>
+
+    <script src="JavaScipt.js"></script>
 </body>
 </html>
