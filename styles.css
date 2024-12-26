@@ -203,57 +203,63 @@ button:hover {
     }
 }
 /*--------------------------------------------------------------------------------------------------------------------------------*/
+/* 搜尋區域 */
 #searchContainer {
-    position: fixed; /* 固定位置 */
-    top: 50%; /* 上下置中 */
-    left: 50%; /* 左右置中 */
-    transform: translate(-50%, -50%); /* 完全置中 */
-    width: 60%; /* 搜尋框的寬度 */
-    max-width: 600px; /* 最大寬度 */
-    background: rgba(255, 255, 255, 0.95); /* 半透明背景 */
-    padding: 20px; /* 內邊距 */
-    border-radius: 10px; /* 圓角 */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* 邊框陰影 */
-    display: none; /* 預設隱藏 */
-    z-index: 1000; /* 浮於其他元素之上 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-/* 搜尋框樣式 */
+.cancel-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cancel-button img {
+    width: 30px;
+    cursor: pointer;
+}
+
 #searchInput {
-    width: 100%; /* 全寬 */
-    padding: 10px; /* 內邊距 */
-    font-size: 16px; /* 字體大小 */
-    color: #000080; /* 深藍色文字 */
-    background-color: #f0f8ff; /* 淡藍色背景 */
-    border: 1px solid #dcdcdc; /* 灰色邊框 */
-    border-radius: 8px; /* 圓角邊框 */
-    outline: none; /* 移除外框 */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* 陰影 */
+    width: 66%; /* 長度為螢幕的 2/3 */
+    padding: 15px 20px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+    text-align: center;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
 }
 
 #searchInput:focus {
-    border-color: #000080; /* 聚焦時的邊框顏色 */
+    border-color: #0056b3;
+    background: #f0f8ff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), inset 0 0 12px rgba(0, 86, 179, 0.6);
 }
 
-/* 顯示搜尋容器時 */
-#searchContainer.active {
-    display: block; /* 顯示 */
+#searchInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+    font-size: 16px;
 }
 
-/* 搜尋按鈕樣式 */
-.header-nav #searchButton {
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+/* 動態效果 */
+#searchInput:hover {
+    transform: scale(1.02);
 }
 
-/* 搜尋按鈕內的圖示 */
-#searchButton img {
-    width: 20px;
-    height: 20px;
+.cancel-button img:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
 }
